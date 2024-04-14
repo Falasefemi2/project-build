@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <style>
+        .shoe-container {
+            position: relative;
+            overflow: hidden;
+            background-image: url("img/a0f84d1a26dc6a9c65662ed146757a5f.jpg");
+            height: 795px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            gap: 200px;
+        }
+
+        .shoe-slide {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            transition: transform 0.5s ease;
+        }
+
+        .shoe-slide.active {
+            left: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- navigation header  -->
+    <nav>
+        <div class="left-header">
+            <img src="img/sneakers.png">
+        </div>
+        <div class="middle-header">
+            <div class="search-text">
+                <input class="input-search" type="text" placeholder="Search">
+                <img src="/img/search.png" width="20" height="20" alt="" class="searchIcon">
+            </div>
+
+            <div class="search-links">
+                <a href="#" class="nav-link">JORDAN</a>
+                <a href="#" class="nav-link">BLAZER</a>
+                <a href="#" class="nav-link">AIR FORCE</a>
+                <a href="#" class="nav-link">HIPPIE</a>
+                <a href="#" class="nav-link">CRATER</a>
+            </div>
+
+
+        </div>
+        <div class="right-header">
+            <span>Limited Offer!</span>
+        </div>
+    </nav>
+
+    <!-- shoe section -->
+    <div class="shoe-container">
+        <div class="shoe-slide active jordan">
+            <div class="shoe-price">
+                <p>$150</p>
+            </div>
+            <div class="shoe-display">
+                <div class="jordan-circle"></div>
+                <img class="jordan-pic" src="img/jordan.png">
+            </div>
+            <div class="shoe-text">
+                <p>AIR JORDAN<br>NEW<br>SEASON</p>
+                <button>BUY NOW!</button>
+            </div>
+        </div>
+
+        <div class="shoe-slide blazer">
+            <div class="shoe-price">
+                <p>$100</p>
+            </div>
+            <div class="shoe-display">
+                <div class="blazer-circle"></div>
+                <img class="blazer-pic" src="img/blazer.png">
+            </div>
+            <div class="shoe-text">
+                <p>BLAZER<br>NEW<br>SEASON</p>
+                <button>BUY NOW!</button>
+            </div>
+        </div>
+
+        <div class="shoe-slide air">
+            <div class="shoe-price">
+                <p>$120</p>
+            </div>
+            <div class="shoe-display">
+                <div class="air-circle"></div>
+                <img class="air-pic" src="img/air.png">
+            </div>
+            <div class="shoe-text">
+                <p>AIR FORCE<br>NEW<br>SEASON</p>
+                <button>BUY NOW!</button>
+            </div>
+        </div>
+
+        <div class="shoe-slide hippie">
+            <div class="shoe-price">
+                <p>$100</p>
+            </div>
+            <div class="shoe-display">
+                <div class="hippie-circle"></div>
+                <img class="hippie-pic" src="img/hippie.png">
+            </div>
+            <div class="shoe-text">
+                <p>HIPPIE<br>NEW<br>SEASON</p>
+                <button>BUY NOW!</button>
+            </div>
+        </div>
+
+        <div class="shoe-slide crater">
+            <div class="shoe-price">
+                <p>$130</p>
+            </div>
+            <div class="shoe-display">
+                <div class="crater-circle"></div>
+                <img class="crater-pic" src="img/crater.png">
+            </div>
+            <div class="shoe-text">
+                <p>CRATER<br>NEW<br>SEASON</p>
+                <button>BUY NOW!</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const shoeSlides = document.querySelectorAll('.shoe-slide');
+
+            navLinks.forEach((link, index) => {
+                link.addEventListener('click', () => {
+                    // Hide all slides
+                    shoeSlides.forEach(slide => {
+                        slide.classList.remove('active');
+                    });
+                    // Show the corresponding slide
+                    shoeSlides[index].classList.add('active');
+                    backButton.style.display = 'block'; // Show back button
+                });
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>

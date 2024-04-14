@@ -1,0 +1,340 @@
+/** @format */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  overflow-x: hidden;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  background-color: black;
+  padding: 20px 50px;
+}
+
+.left-header {
+  margin-top: 4px;
+}
+
+.middle-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-text {
+  display: flex;
+  align-items: center;
+}
+
+.input-search {
+  background-color: grey;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 9px;
+  outline: none;
+  color: white;
+}
+
+.input-search::placeholder {
+  color: white;
+}
+
+.input-search:focus {
+  border: none;
+}
+
+.searchIcon {
+  margin-left: -40px;
+}
+
+.search-links {
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  gap: 45px;
+}
+
+.search-links a {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+}
+
+.right-header span {
+  color: white;
+  border-bottom: 2px solid red;
+  font-size: 20px;
+}
+
+/* .shoe-container {
+  background-image: url("img/a0f84d1a26dc6a9c65662ed146757a5f.jpg");
+  height: 795px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  gap: 200px;
+} */
+
+.first-slide {
+  display: flex;
+  justify-content: center;
+  gap: 200px;
+}
+
+.second-slide {
+  display: flex;
+  gap: 200px;
+}
+
+.jordan,
+.blazer,
+.air,
+.hippie,
+.crater {
+  display: flex;
+  padding-top: 20px;
+  justify-content: center;
+  margin-left: 140px;
+}
+
+.slide-jordan {
+  animation-name: slide-jordan;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-jordan {
+  from {
+    transform: translateX(-1189px);
+  }
+
+  to {
+    transform: translateX(0px);
+  }
+}
+
+.slide-blazer {
+  animation-name: slide-blazer;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-blazer {
+  from {
+    transform: translateX(0px);
+  }
+
+  to {
+    transform: translateX(-1189px);
+  }
+}
+
+.slide-air {
+  animation-name: slide-air;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-air {
+  from {
+    transform: translateX(-1189px);
+  }
+
+  to {
+    transform: translateX(-2374px);
+  }
+}
+
+.slide-hippie {
+  animation-name: slide-hippie;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-hippie {
+  from {
+    transform: translateX(-2374px);
+  }
+
+  to {
+    transform: translateX(-3563px);
+  }
+}
+
+.slide-blazer-air {
+  animation-name: slide-blazer-air;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-blazer-air {
+  from {
+    transform: translateX(-2374px);
+  }
+
+  to {
+    transform: translateX(-1189px);
+  }
+}
+
+.slide-jordan-air {
+  animation-name: slide-jordan-air;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-jordan-air {
+  from {
+    transform: translateX(-2374px);
+  }
+
+  to {
+    transform: translateX(0px);
+  }
+}
+
+.slide-air-hippie {
+  animation-name: slide-air-hippie;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-air-hippie {
+  from {
+    transform: translateX(-3563px);
+  }
+
+  to {
+    transform: translateX(-2374px);
+  }
+}
+
+.shoe-price {
+  color: white;
+  margin-top: 100px;
+  margin-left: 10px;
+}
+
+.shoe-price p {
+  font-size: 54px;
+  font-weight: 200px;
+  border: 1px solid gray;
+  padding: 3px;
+  margin-right: -20px;
+}
+
+.jordan-circle {
+  background-color: #663399;
+  height: 755px;
+  width: 755px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.blazer-circle {
+  background-color: #008080;
+  height: 755px;
+  width: 755px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.air-circle {
+  background-color: #369e62;
+  height: 755px;
+  width: 755px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.hippie-circle {
+  background-color: #7c7350;
+  height: 755px;
+  width: 755px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.crater-circle {
+  background-color: #6495ed;
+  height: 755px;
+  width: 755px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.jordan-pic {
+  position: absolute;
+  margin-top: -730px;
+  margin-left: 14px;
+}
+
+.blazer-pic,
+.air-pic {
+  position: absolute;
+  margin-top: -770px;
+  margin-left: 14px;
+}
+
+.hippie-pic {
+  position: absolute;
+  margin-top: -770px;
+  margin-left: 14px;
+}
+
+.shoe-text {
+  margin-top: 107px;
+  color: white;
+  margin-left: -30px;
+}
+
+.shoe-text p {
+  text-align: center;
+  font-size: 61px;
+  position: absolute;
+  margin-left: -190px;
+  font-weight: 900;
+  text-wrap: nowrap;
+}
+
+.shoe-text button {
+  margin-top: 300px;
+  position: absolute;
+  background-color: black;
+  color: white;
+  font-size: 30px;
+  font-weight: 900;
+  border: 1px solid gray;
+  padding: 0 5px;
+  margin-left: -20px;
+  text-wrap: nowrap;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
